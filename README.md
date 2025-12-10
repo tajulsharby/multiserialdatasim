@@ -19,6 +19,18 @@
 ## Installation
 
 ## Usage
+- To activate the Python virtual environment, run: 
+```venv\bin\activate```
+- Or, if you are running in Mac environment, run:
+```source venv/bin/activate```
+- To deactivate it, run: 
+```deactivate```
+- To auto-activate venv when you enter the app folder, run (for Mac with Homebrew):
+```brew install direnv```
+```eval "$(direnv hook zsh)```
+```source ~/.zshrc```
+```echo 'source .venv/bin/activate' > .envrc```
+```direnv allow```
 
 ## Data Format
 
