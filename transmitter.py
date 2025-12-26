@@ -72,7 +72,7 @@ def get_user_selected_ports(ports):
 
 # Get current system date, paramater accept format, default is YYYY-MM-DD
 def get_current_system_date():
-    today = date.today()
+    today = datetime.now().strftime("%YYYY-%mm-%dd")
     return today
 
 # Get current system time
@@ -149,8 +149,8 @@ def main():
 
     try:
         while True:
-            # heading,easting,northing,random int
-            data1 = f"{generate_random_heading_value()},{generate_easting_value()},{generate_northing_value()}\r\n"
+            # date,time,heading,easting,northing,random int
+            data1 = f"{get_current_system_date()},{get_current_system_time()},{generate_random_heading_value()},{generate_easting_value()},{generate_northing_value()}\r\n"
             # CP
             data2 = f"{generate_cp_value()}\r\n"
 
